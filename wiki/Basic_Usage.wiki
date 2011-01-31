@@ -20,13 +20,13 @@ When it all comes together it looks like:
 {{{
 <!-- Your Head Section -->
 <link rel="stylesheet" type="text/css" media="screen" href="style/jquery.content-panel-switcher.css" /> 
-<script type='text/javascript' src='js/jquery.js'></script>
-<script type='text/javascript' src='js/jquery.content-panel-switcher.js'></script> 
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.content-panel-switcher.js"></script> 
 
 <!--Initialize the Content Switcher, specify the speed (in milliseconds) of the transition and the panel ID you wish the content to appear in -->
-<script type='text/javascript'>
+<script type="text/javascript">
 $(document).ready(function() {
-jcps.fader(300, '#switcher-panel');
+   jcps.fader(300, '#switcher-panel');
 });
 </script> 
 
