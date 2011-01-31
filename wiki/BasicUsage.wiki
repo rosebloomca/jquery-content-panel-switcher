@@ -18,26 +18,26 @@ Eg jcps.fader(300, '#switcher-demo-panel');
 When it all comes together it looks like:
 
 {{{
-Your head section, embedding JS and CSS files
+<!-- Your Head Section -->
 <link rel="stylesheet" type="text/css" media="screen" href="style/jquery.content-panel-switcher.css" /> 
 <script type='text/javascript' src='js/jquery.js'></script>
 <script type='text/javascript' src='js/jquery.content-panel-switcher.js'></script> 
 
-Initialize the Content Switcher, specify the speed (in milliseconds) of the transition and the panel ID you wish the content to appear in
+<!--Initialize the Content Switcher, specify the speed (in milliseconds) of the transition and the panel ID you wish the content to appear in -->
 <script type='text/javascript'>
 $(document).ready(function() {
 jcps.fader(300, '#switcher-panel');
 });
 </script> 
 
-* The switcher buttons, basic anchor tags, with the switcher class
-*<a id="content1" class="switcher">Content 1</a> 
-<a id="content2" class="switcher">Content 2</a> *
+<!--The switcher buttons, basic anchor tags, with the switcher class -->
+<a id="content1" class="switcher">Content 1</a> 
+<a id="content2" class="switcher">Content 2</a>
 
-* The panel you wish to use to display the content
+<!-- The panel you wish to use to display the content -->
 <div id="switcher-panel"></div>
 
-The actual content you want to switch in and out of the panel, this is hidden
+<!-- The actual content you want to switch in and out of the panel, this is hidden -->
 <div id="content1-content" class="switcher-content show">This is content 1</div>
 <div id="content2-content" class="switcher-content">This is content 2</div>
 
