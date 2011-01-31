@@ -1,0 +1,50 @@
+= Components =
+The most basic use is a single panel, like what this page is. There are 4 main components to a simple page like this, those are:
+The switcher buttons, typically a simple <a> tag, with a unique ID of your choice, and the switcher class applied. 
+Eg <a id="home" class="switcher">home<a>
+The content its self, contained in a DIV or a SPAN, with the switcher-content class applied. This class will hide these elements. These must also have a unique ID which matches the name of the switcher buttons ID, with -content added after
+{{{
+<div id="home-content" class="switcher-content">Some content here<div>
+}}}
+The the panel you wish you have your content appear in, typically in a central position on the page, like the one your reading now, this must have a unique ID, which you can choose
+{{{
+<div id="switcher-content" ><div>
+}}}
+
+The initialization function in the header that tells the plugin what content panel you wish to use, and what speed you wish it to transition at. This must be wrapped in a jQuery $(document).ready block
+Eg jcps.fader(300, '#switcher-demo-panel');
+
+= Code Sample =
+When it all comes together it looks like:
+
+{{{
+<!-- Your Head Section -->
+<link rel="stylesheet" type="text/css" media="screen" href="style/jquery.content-panel-switcher.css" /> 
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/jquery.content-panel-switcher.js'></script> 
+
+<!--Initialize the Content Switcher, specify the speed (in milliseconds) of the transition and the panel ID you wish the content to appear in -->
+<script type='text/javascript'>
+$(document).ready(function() {
+jcps.fader(300, '#switcher-panel');
+});
+</script> 
+
+<!--The switcher buttons, basic anchor tags, with the switcher class -->
+<a id="content1" class="switcher">Content 1</a> 
+<a id="content2" class="switcher">Content 2</a>
+
+<!-- The panel you wish to use to display the content -->
+<div id="switcher-panel"></div>
+
+<!-- The actual content you want to switch in and out of the panel, this is hidden -->
+<div id="content1-content" class="switcher-content show">This is content 1</div>
+<div id="content2-content" class="switcher-content">This is content 2</div>
+
+}}}
+
+= But Wait ..= 
+What is that extra show class on the content1-content div? If you wish to have some content display as the default content in the panel when the page loads, simply add the show class to the end of the div class list. This is purely optional, but not everyone wants a blank page to load. 
+
+= Additional Transition Types =
+You might notice the initialization string says jcps.fader, this fades the content in and out, but if you would prefer to slide the content in and out change this string to say jcps.slider instead
