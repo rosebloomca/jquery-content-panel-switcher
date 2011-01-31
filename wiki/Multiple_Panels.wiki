@@ -26,7 +26,7 @@ jcps.slider(500, '#switcher-panel2', '.set2');
 <a id="content1" class="switcher set1">Content 1</a> 
 <a id="content2" class="switcher set1">Content 2</a> 
 
-These are the second set of switcher buttons
+<!-- These are the second set of switcher buttons -->
 <a id="content2" class="switcher set2">Content 3</a> 
 <a id="content3" class="switcher set2">Content 4</a> 
 
