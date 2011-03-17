@@ -10,6 +10,8 @@ The problem with this is that when you initialize your fancy blog or other plugi
 The solution to this is to use the jQuery Live() function.  
 Found here: http://api.jquery.com/live/
 
+The Live() function simply allows jQuery to keep track of where things are.  In the example below, we call the Live() function and hand it the Fancybox initialization command instead of running it by its self in the $(document).ready()
+
 = Example =
 Here is an example of how to implement the Live() function for the jQuery Fancybox plugin.
 
