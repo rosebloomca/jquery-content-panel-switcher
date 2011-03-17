@@ -32,3 +32,17 @@ Here is an example of how to implement the Live() function for the jQuery Fancyb
 		$(this).fancybox();
 	});
 }}}
+
+
+*Full Script Block Example*
+{{{
+<script type='text/javascript'>
+$(document).ready(function() {
+	jcps.fader(300, '#switcher-panel');
+
+	$("a.fb").live('click', function(){ 
+		$(this).fancybox();
+	});
+});
+</script>  
+}}}
