@@ -59,4 +59,4 @@ A quick hack to get around this is to retrigger the cick event like so
 	});
 }}}
 
-Keep in mind, this isnt the more effecient way of doing things.   It does work, but I wouldn't recommend doing this for pages with lots of links that will trigger the plugin.
+Keep in mind, this isnt the more effecient way of doing things.   It does work, but I wouldn't recommend doing this for pages with lots of links that will trigger the plugin as your effectively re-initializing the plugin on each click.   Not such a big deal for a small image gallery, but not great for page full of links that trigger the plugin.
