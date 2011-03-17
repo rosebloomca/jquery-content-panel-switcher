@@ -46,3 +46,18 @@ $(document).ready(function() {
 });
 </script>  
 }}}
+
+Some plugins may not work properly like this, and may require a second click in order for the plugin to work.   This is because the first click initialized the plugin, but does not trigger the effect.
+The second click triggers the effect as the plugin is then initialized.
+
+A quick hack to get around this is to retrigger the cick event like so
+
+*Retrigger The Click Event*
+{{{
+	$("a.fb").live('click', function() {
+		$(this).fancybox();
+		$(this).click();
+	});
+}}}
+
+Keep in mind, this isnt the more effecient way of doing things.   It does work, but I wouldn't recommend doing this for pages with lots of links that will trigger the plugin.
