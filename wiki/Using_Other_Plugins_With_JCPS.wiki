@@ -8,10 +8,12 @@ The reason for this is due to the fact that the Content Panel Switcher is doing 
 The problem with this is that when you initialize your fancy blog or other plugin on page load, it registers where the elements are, in the DOM, although as soon as you switch the content around using JCPS, it looses track of where the element have gone.
 
 The solution to this is to use the jQuery Live() function.  
-Found here: *http://api.jquery.com/live/*
+Found here: http://api.jquery.com/live/
 
 = Example =
 Here is an example of how to implement the Live() function for the jQuery Fancybox plugin.
+
+
 
 *Without The Live() Function*
 {{{
@@ -23,6 +25,9 @@ $(document).ready(function() {
 });
 </script>  
 }}}
+
+
+
 
 *With The Live() Function*
 {{{
