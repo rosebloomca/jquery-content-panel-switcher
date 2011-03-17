@@ -1,0 +1,38 @@
+#labels Phase-Implementation
+= Using Other Plugins With JCPS =
+You may wish to use other plugins such as Fancybox or Shadowbox to display photos in the hidden panels, and have them pop up when people click on them.
+
+Initially you may find that the plugins do not work, and have no effect.
+
+The reason for this is due to the fact that the Content Panel Switcher is doing just as its name suggests, switching content around on the page.
+The problem with this is that when you initialize your fancy blog or other plugin on page load, it registers where the elements are, in the DOM, although as soon as you switch the content around using JCPS, it looses track of where the element have gone.
+
+The solution to this is to use the jQuery Live() function.  
+Found here: *http://api.jquery.com/live/*
+
+= Example =
+Here is an example of how to implement the Live() function for the jQuery Fancybox plugin.
+
+*Without The Live() Function*
+{{{
+<script type='text/javascript'>
+$(document).ready(function() {
+	jcps.fader(300, '#switcher-panel');
+
+	$("a.fb").fancybox();
+});
+</script>  
+}}}
+
+*With The Live() Function*
+{{{
+<script type='text/javascript'>
+$(document).ready(function() {
+	jcps.fader(300, '#switcher-panel');
+
+	$("a.fb").live('click', function(){ 
+		$(this).fancybox();
+	});
+});
+</script>  
+}}}
