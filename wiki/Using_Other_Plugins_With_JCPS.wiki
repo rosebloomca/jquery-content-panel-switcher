@@ -55,8 +55,7 @@ A quick hack to get around this is to retrigger the cick event like so
 *Retrigger The Click Event*
 {{{
 	$("a.fb").live('click', function() {
-		$(this).fancybox();
-		$(this).click();
+		$(this).fancybox().click();
 	});
 }}}
 
