@@ -17,13 +17,8 @@ Here is an example of how to implement the Live() function for the jQuery Fancyb
 
 *Without The Live() Function*
 {{{
-<script type='text/javascript'>
-$(document).ready(function() {
-	jcps.fader(300, '#switcher-panel');
-
 	$("a.fb").fancybox();
-});
-</script>  
+
 }}}
 
 
@@ -31,13 +26,7 @@ $(document).ready(function() {
 
 *With The Live() Function*
 {{{
-<script type='text/javascript'>
-$(document).ready(function() {
-	jcps.fader(300, '#switcher-panel');
-
 	$("a.fb").live('click', function(){ 
 		$(this).fancybox();
 	});
-});
-</script>  
 }}}
